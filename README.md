@@ -3,7 +3,8 @@
 ![Final version](http://drive.google.com/uc?export=view&id=1_80C0WJcjN7gWknnuREwBXbEnsJjX49b)
 
 
-# &nbsp;
+&nbsp;
+&nbsp;
 ## The Current Design
 
 I’m going to be working on the design of the **marketplace** itself.
@@ -11,7 +12,9 @@ I’m going to be working on the design of the **marketplace** itself.
 Layout and structure-wise it’s a good start but I think there is a room for improvement
 
 
-# &nbsp;
+
+&nbsp;
+&nbsp;
 ## Reducing the Header Area
 
 ![Original Site Screenshot](http://drive.google.com/uc?export=view&id=1yTAnOrtMd4t7wxmcQZ1ReQXSIWFQAL_W)
@@ -28,8 +31,8 @@ Finally let’s add a title to clearly labelling the page.
 
 ![Screenshot without teaser](http://drive.google.com/uc?export=view&id=1GMtOsPt20JB8qSXrf_0BcN9HBmR-q3T3)
 
-
-# &nbsp;
+&nbsp;
+&nbsp;
 ## Relocate Newsletter Signup Form
 
 Considering content priority it has to be lower in visual hierarchy. Let’s move the form below the listings table.
@@ -38,8 +41,8 @@ Considering content priority it has to be lower in visual hierarchy. Let’s mov
 ![Relocated Signup Form](http://drive.google.com/uc?export=view&id=1SqGDl8VEJjoMA3WocFXg3p2lMcjgsyt-)
 
 
-# &nbsp;
-
+&nbsp;
+&nbsp;
 ## Fine-Tuning the Navigation
 
 ![Original Navigation](http://drive.google.com/uc?export=view&id=1C3FFVOmcLoe9lxv4wKFZpAuDK8N-i-y4)
@@ -59,7 +62,8 @@ Also it would be nice if there was some difference between active and inactive i
 ![Updated Navigation](http://drive.google.com/uc?export=view&id=1Rkmglx2_Jxy_AvZrfnKz3T7briox_W02)
 
 
-# &nbsp;
+&nbsp;
+&nbsp;
 ## The Listing Filter
 
 ![The Original Tabbar](http://drive.google.com/uc?export=view&id=17QrIyEXZer2gB9BfRVIYEFnQrJ6VI5VH)
@@ -78,7 +82,8 @@ What if we remove the search field? Due to the fact that mobile screen estate is
 ![Modified Tabbar](http://drive.google.com/uc?export=view&id=1g_pYuFd1PM9MT2TpOARKkkrQu_Jnipp2)
 
 
-# &nbsp;
+&nbsp;
+&nbsp;
 ## The Listing Item
 
 The listing table is well structured, clean, easy to understand what’s going on. The only thing I would change is the category button. It’s stealing a lot of overall attention.
@@ -87,7 +92,8 @@ The listing table is well structured, clean, easy to understand what’s going o
 ![Modified category button](http://drive.google.com/uc?export=view&id=1COH0tkYjSonrzo7fCpvpcFiFP0HQBIAd)
 
 
-# &nbsp;
+&nbsp;
+&nbsp;
 ## Relocating the Search Field
 
 We just removed the search input below the Listing type selector. Let’s move it to the header area. It’s a more conventional location and making a bit easier for users to discover.
@@ -97,7 +103,8 @@ To make it even more obvious that it’s a search field i’ve also added a magn
 ![Relocaetd Search Field](http://drive.google.com/uc?export=view&id=1VjJgVhvXhe3UfTr_ylc6jpVIn5TF1ZKw)
 
 
-# &nbsp;
+&nbsp;
+&nbsp;
 ## The Testimonials Slider
 
 ![Original Testimonial Slider](http://drive.google.com/uc?export=view&id=1uA9VHvVCJZ71b7RYq096rq1GhTpx1eIs)
@@ -113,7 +120,8 @@ To separate them a little more let’s switch the cite font weight to bold, capi
 ![Updated Testimonial Slider](http://drive.google.com/uc?export=view&id=1ibvuWwAhC8SgP50eqg84FqI73p_aoY6o)
 
 
-# &nbsp;
+&nbsp;
+&nbsp;
 ## The Footer Area
 
 ![Original Footer](http://drive.google.com/uc?export=view&id=1BDETPpnc9-SF1rzD91TGs_MJi_u_i4w8)
