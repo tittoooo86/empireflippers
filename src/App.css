@@ -1,28 +1,122 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif !important;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+a,
+a:hover{
+    text-decoration: none !important;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+::-webkit-input-placeholder {
+    color: #C5C5C5;
+    font-weight: 300;
+}
+::-moz-placeholder {
+     color: #C5C5C5;
+    font-weight: 300;
+ }
+:-ms-input-placeholder {
+    color: #C5C5C5;
+    font-weight: 300;
+}
+:-moz-placeholder {
+    color: #C5C5C5;
+    font-weight: 300;
 }
 
-.App-title {
-  font-size: 1.5em;
+.Navbar.navbar {
+    background: #292929;
+    color: #fff;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
-.App-intro {
-  font-size: large;
+.Navbar .navbar-nav {
+    padding: 0 1rem;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+
+
+.Navbar .navbar-brand {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.Navbar .navbar-brand img {
+    margin-right: 15px;
+}
+
+.Navbar .nav-link {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 300;
+    color: #fff !important;
+    border-bottom: 2px solid #292929;
+    transition: background .2s ease-in;
+}
+
+.Navbar .nav-link.active {
+    font-weight: 700;
+}
+
+.Navbar.navbar-light .navbar-nav .nav-link,
+.Navbar.navbar-light .navbar-brand {
+    color: #fff;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover{
+    background-color: #1D1D1D;
+    border-bottom: 2px solid #F5A623;
+}
+
+@media (min-width: 768px) {
+    .Navbar.navbar-expand-md .navbar-nav .nav-link {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .Navbar .navbar-brand {
+        display: flex;
+        align-items: baseline;
+    }
+
+    .Navbar .nav-item {
+        display: flex;
+        align-items: center;
+    }
+}
+
+/*TABS*/
+.nav-tabs{
+    justify-content: stretch !important;
+}
+.nav-tabs .nav-item{
+    flex-grow: 1;
+    justify-content: center;
+
+}
+
+.nav-tabs .nav-link{
+    text-align: center;
+    background-color: #f5f5f5;
+    color: #6D6D6D !important;
+    border: none !important;
+    border-radius: 0 !important;
+    cursor: pointer;
+    padding: 0 !important;
+    line-height: 55px;
+    flex: 1;
+}
+
+.nav-tabs .nav-link.active{
+    background-color: #3c79cb !important;
+    color: #fff !important;
+    font-weight: 700 !important;
 }

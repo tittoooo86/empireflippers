@@ -9,7 +9,7 @@
 
 I’m going to be working on the design of the **marketplace** itself.
 
-Layout and structure-wise it’s a good start but I think there is a room for improvement
+Layout and structure-wise it’s a good start but I think there is room for improvement
 
 
 
@@ -17,13 +17,13 @@ Layout and structure-wise it’s a good start but I think there is a room for im
 &nbsp;
 ## Reducing the Header Area
 
-![Original Site Screenshot](http://drive.google.com/uc?export=view&id=1yTAnOrtMd4t7wxmcQZ1ReQXSIWFQAL_W)
+![Original Site Screenshot](http://drive.google.com/uc?export=view&id=16F1gadAmxC5PJu8EJYKws4bN6vQ2VtPC)
 
 &nbsp;
 
 The first and most important thing I’m going to look at on this page is the giant teaser section under the main nav.
 
-If you visit the page from a 15 inch laptop you can’t see any of the main content without scrolling. It’s even worse on mobile devices - you have to scroll almost twice as much as the screen height (on a 4.7” display) to reveal the first listing. The removal of teaser section bring more attention to the listings where it belongs.
+If you visit the page from a 15 inch laptop you can’t see any of the main content without scrolling. It’s even worse on mobile devices - you have to scroll almost twice as much as the screen height (on a 4.7” display) to reveal the first listing. The removal of the teaser section brings more attention to the listings where it belongs.
 
 Finally let’s add a title to clearly labelling the page.
 
@@ -51,7 +51,7 @@ Considering content priority it has to be lower in visual hierarchy. Let’s mov
 
 The navigation looks pretty clean and functional, but it would be nice to give it a little more information.
 
-If we adding accent border and slightly darker background color to the active menu item it will be more meaningful. It’s always a good experience if you can see where you are within a site.
+If we would add accent border and a slightly darker background color to the active menu item, it would be more meaningful, more defined. It’s always a good experience if you can see where you are within a site.
 
 [IMAGE - new design darker active item background and border]
 
@@ -66,7 +66,7 @@ Also it would be nice if there was some difference between active and inactive i
 &nbsp;
 ## The Listing Filter
 
-![The Original Tabbar](http://drive.google.com/uc?export=view&id=17QrIyEXZer2gB9BfRVIYEFnQrJ6VI5VH)
+![The Original Tabbar](http://drive.google.com/uc?export=view&id=1LThS-HBwkF4zlisrBZPUJpiaXlbg0VrU)
 
 &nbsp;
 
