@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {Container, Row, Col} from 'reactstrap';
 import styled from 'styled-components';
 
@@ -32,12 +32,11 @@ const Item = styled.li`
     border-radius: 15px;
     font-size: 12px;
     margin: 0 5px;
-    transition: background .3s ease-in;
     cursor: pointer;
     background: ${props => props.active ? '#3c79cb' : '#fff'};
     &:hover{
-        background: #f5f5f5;
-        
+        transition: background .3s ease-in;
+        background: ${props => props.active ? '#4168A9' : '#f5f5f5'}; 
     }
     @media (max-width: 768px) {
         display: table-cell;
@@ -51,23 +50,40 @@ const ModCol = styled(Col)`
     }
 `;
 
-const Filter = () => (
-    <FilterWrapper>
-        <Container>
-            <Row>
-                <ModCol sm={12}>
-                    <List>
-                        <Item active>All</Item>
-                        <Item>AdSense</Item>
-                        <Item>Affiliate</Item>
-                        <Item>Amazon FBA</Item>
-                        <Item>Dropshipping</Item>
-                        <Item>Other</Item>
-                    </List>
-                </ModCol>
-            </Row>
-        </Container>
-    </FilterWrapper>
-);
+export default class Filter extends Component {
 
-export default Filter
+    state = {
+        activeFilters: ['all']
+    };
+
+    _filterClicked = (filter) => {
+        let {activeFilters} = this.state;
+        if(!activeFilters.includes(filter.toLowerCase())){
+            activeFilters.push(filter.toLowerCase());
+        } else {
+            const index = activeFilters.indexOf(filter.toLowerCase());
+            if (index > -1) {
+                activeFilters.splice(index, 1);
+            }
+        }
+
+        this.setState({activeFilters});
+
+    };
+
+    render(){
+        const filters = ['All', 'AdSense', 'Affiliate', 'Amazon FBA', 'Dropshipping', 'Other'];
+        const {activeFilters} = this.state;
+        return <FilterWrapper>
+            <Container>
+                <Row>
+                    <ModCol sm={12}>
+                        <List>
+                            {filters.map((filter, index) => <Item key={index} active={activeFilters.includes(filter.toLowerCase())} onClick={() => this._filterClicked(filter.toLowerCase())}>{filter}</Item>)}
+                        </List>
+                    </ModCol>
+                </Row>
+            </Container>
+        </FilterWrapper>
+    }
+}

@@ -71,9 +71,7 @@ const ThWithPadding = styled(Th)`
     }
 `;
 
-const dummy = ["1",  "@", "#","1",  "@", "#","1",  "@", "#","1",  "@", "#","1",  "@", "#", "1",  "@", "#","1",  "@", "#"];
-
-const Listings = () => (
+const Listings = ({list}) => (
     <Table>
         <Thead>
         <Tr>
@@ -87,15 +85,15 @@ const Listings = () => (
         </Tr>
         </Thead>
         <Tbody>
-        {dummy.map((item, index) => {
+        {list.map((item, index) => {
             return <Tr key={index}>
-                <TdWithPadding><Name>Multiple</Name></TdWithPadding>
-                <TdWithPadding><Category>Romance</Category></TdWithPadding>
-                <TdWithPadding><Id>44862</Id></TdWithPadding>
-                <TdWithPadding>&nbsp;</TdWithPadding>
-                <TdWithPadding>&nbsp;</TdWithPadding>
-                <TdWithPadding><Profit>$83,269.45</Profit></TdWithPadding>
-                <TdWithPadding><Price>$2,498,083.50</Price></TdWithPadding>
+                <TdWithPadding><Name>{item.type}</Name></TdWithPadding>
+                <TdWithPadding><Category>{item.category}</Category></TdWithPadding>
+                <TdWithPadding><Id>{item.id}</Id></TdWithPadding>
+                <TdWithPadding>{item.pbn}</TdWithPadding>
+                <TdWithPadding>{item.interview}</TdWithPadding>
+                <TdWithPadding><Profit>{item.profit}</Profit></TdWithPadding>
+                <TdWithPadding><Price>{item.price}</Price></TdWithPadding>
             </Tr>
         })}
         </Tbody>

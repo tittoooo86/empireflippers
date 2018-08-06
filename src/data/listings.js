@@ -7,6 +7,7 @@ const listings = [
         interview: false,
         profit: '$83,269.45',
         price: '$2,498,083.50',
+        isNew: true
     },
     {
         type: 'Amazon FBA',
@@ -16,6 +17,7 @@ const listings = [
         interview: true,
         profit: '$51,437.81',
         price: '$1,440,258.68',
+        isNew: true
     },
     {
         type: 'Multiple',
@@ -106,6 +108,7 @@ const listings = [
         interview: false,
         profit: '$24,602.57',
         price: '$762,679.67',
+        sold: true
     },
     {
         type: 'eCommerce',
@@ -115,6 +118,7 @@ const listings = [
         interview: false,
         profit: '$24,022.94',
         price: '$744,710.83',
+        sold: true
     },
     {
         type: 'SaaS',
@@ -124,6 +128,7 @@ const listings = [
         interview: true,
         profit: '$17,871.05',
         price: '$714,842.00',
+        sold: true
     },
     {
         type: 'eCommerce',
