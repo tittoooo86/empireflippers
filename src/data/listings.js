@@ -1,6 +1,6 @@
 const listings = [
     {
-        name: 'Multiple',
+        type: 'Multiple',
         category: 'Publishing',
         id: '44862',
         pbn: null,
@@ -10,7 +10,7 @@ const listings = [
     },
 
     {
-        name: 'Amazon FBA',
+        type: 'Amazon FBA',
         category: 'Health & Fitness, Beauty',
         id: '44689',
         pbn: null,
@@ -19,7 +19,7 @@ const listings = [
         price: '$1,440,258.68',
     },
     {
-        name: 'Multiple',
+        type: 'Multiple',
         category: 'Furniture',
         id: '44772',
         pbn: null,
@@ -28,7 +28,7 @@ const listings = [
         price: '$1,304,371.92',
     },
     {
-        name: 'Multiple',
+        type: 'Multiple',
         category: 'Apparel & Accessories',
         id: '44069',
         pbn: null,
@@ -37,7 +37,7 @@ const listings = [
         price: '$1,296,871.93',
     },
     {
-        name: 'Affiliate',
+        type: 'Affiliate',
         category: 'Audio, Audio ',
         id: '44671',
         pbn: null,
@@ -46,7 +46,7 @@ const listings = [
         price: '$1,156,144.08',
     },
     {
-        name: 'Dropshipping',
+        type: 'Dropshipping',
         category: 'Apparel & Accessories',
         id: '44299',
         pbn: null,
@@ -55,7 +55,7 @@ const listings = [
         price: '$1,153,595.25',
     },
     {
-        name: 'eCommerce',
+        type: 'eCommerce',
         category: 'Fashion Accessories',
         id: '44799',
         pbn: null,
@@ -64,7 +64,7 @@ const listings = [
         price: '$1,068,425.22',
     },
     {
-        name: 'eCommerce',
+        type: 'eCommerce',
         category: 'Apparel & Accessories',
         id: '44060',
         pbn: null,
@@ -73,7 +73,7 @@ const listings = [
         price: '$916,847.10',
     },
     {
-        name: 'Multiple',
+        type: 'Multiple',
         category: 'Apparel & Accessories',
         id: '44472',
         pbn: null,
@@ -82,7 +82,7 @@ const listings = [
         price: '$846,576.00',
     },
     {
-        name: 'Multiple',
+        type: 'Multiple',
         category: 'Beauty & Cosmetics',
         id: '44619',
         pbn: null,
@@ -91,7 +91,7 @@ const listings = [
         price: '$843,592.68',
     },
     {
-        name: 'Dropshipping',
+        type: 'Dropshipping',
         category: 'Apparel & Accessories',
         id: '44373',
         pbn: null,
@@ -100,7 +100,7 @@ const listings = [
         price: '$795,726.68',
     },
     {
-        name: 'Multiple',
+        type: 'Multiple',
         category: 'Gaming',
         id: '44573',
         pbn: null,
@@ -109,7 +109,7 @@ const listings = [
         price: '$762,679.67',
     },
     {
-        name: 'eCommerce',
+        type: 'eCommerce',
         category: 'Finance',
         id: '44227',
         pbn: null,
@@ -118,7 +118,7 @@ const listings = [
         price: '$744,710.83',
     },
     {
-        name: 'SaaS',
+        type: 'SaaS',
         category: 'Technology',
         id: '44227',
         pbn: null,
@@ -127,7 +127,7 @@ const listings = [
         price: '$714,842.00',
     },
     {
-        name: 'eCommerce',
+        type: 'eCommerce',
         category: 'Sports & Outdoors',
         id: '44502',
         pbn: null,
@@ -136,7 +136,7 @@ const listings = [
         price: '$600,082.97',
     },
     {
-        name: 'Multiple',
+        type: 'Multiple',
         category: 'Apparel & Accessories',
         id: '44346',
         pbn: null,
