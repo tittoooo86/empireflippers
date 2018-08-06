@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import {connect} from 'react-redux';
-import {Container, Row, Col} from 'reactstrap';
+import {Container} from 'reactstrap';
 
 import Header from '../components/Header';
 import TitleBar from '../components/TitleBar';
@@ -29,10 +29,10 @@ class App extends Component {
         return (
             <Fragment>
                 <Header/>
-                <TitleBar />
+                <TitleBar/>
                 <Container>
 
-                    <ListingsWrapper />
+                    <ListingsWrapper/>
                 </Container>
                 <Newsletter/>
                 <Stats stats={stats}/>

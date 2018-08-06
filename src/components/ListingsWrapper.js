@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
 import styled from 'styled-components';
@@ -13,10 +13,6 @@ export default class ListingsWrapper extends Component {
     state = {
         activeTab: '1'
     };
-
-    constructor(props) {
-        super(props);
-    }
 
     toggle = (tab) => {
         if (this.state.activeTab !== tab) {

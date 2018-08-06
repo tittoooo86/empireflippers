@@ -54,7 +54,7 @@ const Testimonials = () => (
                 <Col sm="12">
                     <StyledTitle>Satisfied Buyers</StyledTitle>
                     <Slider {...settings}>
-                        {testimonials.map(item => <Card item={item} />)}
+                        {testimonials.map((item, index) => <Card key={index} item={item} />)}
                     </Slider>
                 </Col>
             </Row>

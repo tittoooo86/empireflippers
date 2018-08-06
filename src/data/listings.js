@@ -8,7 +8,6 @@ const listings = [
         profit: '$83,269.45',
         price: '$2,498,083.50',
     },
-
     {
         type: 'Amazon FBA',
         category: 'Health & Fitness, Beauty',

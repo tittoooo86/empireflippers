@@ -87,9 +87,8 @@ const Listings = () => (
         </Tr>
         </Thead>
         <Tbody>
-        {dummy.map(item => {
-            console.log("item: ", item);
-            return <Tr>
+        {dummy.map((item, index) => {
+            return <Tr key={index}>
                 <TdWithPadding><Name>Multiple</Name></TdWithPadding>
                 <TdWithPadding><Category>Romance</Category></TdWithPadding>
                 <TdWithPadding><Id>44862</Id></TdWithPadding>

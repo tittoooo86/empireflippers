@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import PropTypes from "prop-types";
 import {Container, Row, Col} from 'reactstrap';
 import styled from 'styled-components';
@@ -32,8 +32,7 @@ const Stats = ({stats}) => (
     <StatWrapper>
         <Container>
             <Row>
-                {stats.map((item, i) => <Col sm={12} md={4}><StatItem
-                    key={i}><StatValue>{item.value}</StatValue><StatName>{item.name}</StatName></StatItem></Col>)}
+                {stats.map((item, i) => <Col sm={12} md={4} key={i}><StatItem><StatValue>{item.value}</StatValue><StatName>{item.name}</StatName></StatItem></Col>)}
             </Row>
         </Container>
     </StatWrapper>
