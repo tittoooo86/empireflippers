@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {createSelector} from 'reselect';
 import {TabContent, TabPane, Nav, NavItem, NavLink, Row, Col} from 'reactstrap';
 import classnames from 'classnames';
 import styled from 'styled-components';
@@ -7,7 +8,6 @@ import Listings from './Listings';
 import Filter from './Filter';
 import {fetchItems, applyFilter, changeTab} from '../actions/items';
 import {selectNewLisiting, selectSoldLisiting, selectCurrentLisiting} from '../reducers';
-import {createSelector} from 'reselect'
 
 const Wrapper = styled.div`
     margin: 35px 0;
@@ -54,7 +54,6 @@ class ListingsWrapper extends Component {
 
     render() {
         const {list, newList, soldList, isFetching} = this.props;
-
         return (
             <Wrapper>
                 <Nav tabs>

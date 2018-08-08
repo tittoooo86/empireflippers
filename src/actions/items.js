@@ -1,5 +1,5 @@
 import api from '../api/fakeApi';
-import {ITEMS_REQUEST, ITEMS_SUCCESS, APPLY_FILTER, CHANGE_TAB} from '../constants';
+import {ITEMS_REQUEST, ITEMS_SUCCESS, APPLY_FILTER, CHANGE_TAB, SEARCH_ITEM} from '../constants';
 
 function fethingItems() {
     return {
@@ -39,5 +39,14 @@ export function changeTab(tab) {
     return {
         type: CHANGE_TAB,
         payload: tab,
+    };
+}
+
+
+export function searchItem(query) {
+    return (dispatch) => {
+        dispatch(fethingItems());
+        return api.searchItems(query)
+            .then((items) => dispatch(itemsSuccess(items)));
     };
 }

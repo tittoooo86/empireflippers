@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import {Container, Row, Col} from 'reactstrap';
 import styled from 'styled-components';
 import search from './images/search.png';
+import {searchItem} from "../actions/items";
 
 const TitleWrapper = styled.div`
     width: 100%;
@@ -26,7 +28,10 @@ const Input = styled.input`
     background-color: #F8F8F8;
     box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
 `;
-export default class TitleBar extends Component {
+class TitleBar extends Component {
+    _onSearchChanged = (e) => {
+        this.props.searchItem(e.target.value)
+    };
 
     render() {
         return (
@@ -35,7 +40,7 @@ export default class TitleBar extends Component {
                     <Col sm={12}>
                         <TitleWrapper>
                             <Title>Marketplace</Title>
-                            <Input placeholder={`Search for listings...`}/>
+                            <Input placeholder={`Search for listings...`} onChange={ this._onSearchChanged}/>
                         </TitleWrapper>
                     </Col>
                 </Row>
@@ -43,3 +48,11 @@ export default class TitleBar extends Component {
         );
     }
 }
+
+const mapStateToProps = (state) => {
+    return {};
+};
+
+const mapDispatchToProps = {searchItem};
+
+export default connect(mapStateToProps, mapDispatchToProps)(TitleBar);

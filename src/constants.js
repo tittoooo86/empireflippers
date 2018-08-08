@@ -5,3 +5,7 @@ export const ITEMS_FAILURE = 'ITEMS_FAILURE';
 export const APPLY_FILTER = 'APPLY_FILTER';
 
 export const CHANGE_TAB = 'CHANGE_TAB';
+
+export const SEARCH_ITEM = 'SEARCH_ITEM';
+export const SEARCH_ITEM_SUCCESS = 'SEARCH_ITEM_SUCCESS';
+export const SEARCH_ITEM_ERROR = 'SEARCH_ITEM_ERROR';
