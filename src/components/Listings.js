@@ -45,6 +45,7 @@ const Price = styled.p`
 `;
 
 const TdWithPadding = styled(Td)`
+    text-align: center;
     border-bottom: 1px solid #DDDDDD;
     
      @media (min-width: 768px) {
@@ -58,6 +59,7 @@ const TdWithPadding = styled(Td)`
 `;
 
 const ThWithPadding = styled(Th)`
+    text-align: center;
     border-bottom: 1px solid #DDDDDD;
     color: #6D6D6D;
     
@@ -90,8 +92,8 @@ const Listings = ({list}) => (
                 <TdWithPadding><Name>{item.type}</Name></TdWithPadding>
                 <TdWithPadding><Category>{item.category}</Category></TdWithPadding>
                 <TdWithPadding><Id>{item.id}</Id></TdWithPadding>
-                <TdWithPadding>{item.pbn}</TdWithPadding>
-                <TdWithPadding>{item.interview}</TdWithPadding>
+                <TdWithPadding>{item.pbn ? 'al': item.pbn}</TdWithPadding>
+                <TdWithPadding>{item.interview ? ' ': <img src="/ico_seller_interview_02.png" width={20} alt="" style={{margin: '0 auto'}}/>}</TdWithPadding>
                 <TdWithPadding><Profit>{item.profit}</Profit></TdWithPadding>
                 <TdWithPadding><Price>{item.price}</Price></TdWithPadding>
             </Tr>

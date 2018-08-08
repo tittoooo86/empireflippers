@@ -34,6 +34,7 @@ const Copyright = styled.p`
     display: flex;
     align-items: baseline;
     justify-content: center;
+    margin-bottom: 0;
 `;
 
 const Logo = styled.img`

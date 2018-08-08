@@ -1,5 +1,5 @@
 import api from '../api/fakeApi';
-import { ITEMS_REQUEST, ITEMS_SUCCESS, ITEMS_FAILURE } from '../constants';
+import {ITEMS_REQUEST, ITEMS_SUCCESS, APPLY_FILTER, CHANGE_TAB} from '../constants';
 
 function fethingItems() {
     return {
@@ -12,18 +12,32 @@ function itemsSuccess(items) {
         payload: items,
     };
 }
-function itemsError(error) {
-    return {
-        type: ITEMS_FAILURE,
-        error: 'Failed to fetch rooms',
-        payload: error,
-    };
-}
+// function itemsError(error) {
+//     return {
+//         type: ITEMS_FAILURE,
+//         error: 'Failed to fetch rooms',
+//         payload: error,
+//     };
+// }
 
 export function fetchItems() {
     return (dispatch) => {
         dispatch(fethingItems());
         return api.fetchItems()
             .then((items) => dispatch(itemsSuccess(items)));
+    };
+}
+
+export function applyFilter(filters) {
+    return {
+        type: APPLY_FILTER,
+        payload: filters,
+    };
+}
+
+export function changeTab(tab) {
+    return {
+        type: CHANGE_TAB,
+        payload: tab,
     };
 }

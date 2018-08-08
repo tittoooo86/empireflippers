@@ -58,16 +58,28 @@ export default class Filter extends Component {
 
     _filterClicked = (filter) => {
         let {activeFilters} = this.state;
-        if(!activeFilters.includes(filter.toLowerCase())){
-            activeFilters.push(filter.toLowerCase());
+        const clearedFilter = filter.toLowerCase().replace(/\s+/g, '');
+        if(!activeFilters.includes(clearedFilter)){
+            activeFilters.push(clearedFilter);
         } else {
-            const index = activeFilters.indexOf(filter.toLowerCase());
+            const index = activeFilters.indexOf(clearedFilter);
             if (index > -1) {
                 activeFilters.splice(index, 1);
             }
         }
 
+        if(filter !== 'all' && activeFilters.includes('all')){
+            const index = activeFilters.indexOf('all');
+            if (index > -1) {
+                activeFilters.splice(index, 1);
+            }
+        } else if (filter === 'all') {
+            activeFilters = ['all']
+        }
+
         this.setState({activeFilters});
+
+        this.props.onFilterSelected(activeFilters);
 
     };
 
@@ -79,7 +91,7 @@ export default class Filter extends Component {
                 <Row>
                     <ModCol sm={12}>
                         <List>
-                            {filters.map((filter, index) => <Item key={index} active={activeFilters.includes(filter.toLowerCase())} onClick={() => this._filterClicked(filter.toLowerCase())}>{filter}</Item>)}
+                            {filters.map((filter, index) => <Item key={index} active={activeFilters.includes(filter.toLowerCase().replace(/\s+/g, ''))} onClick={() => this._filterClicked(filter.toLowerCase())}>{filter}</Item>)}
                         </List>
                     </ModCol>
                 </Row>

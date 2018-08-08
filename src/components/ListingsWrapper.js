@@ -5,8 +5,9 @@ import classnames from 'classnames';
 import styled from 'styled-components';
 import Listings from './Listings';
 import Filter from './Filter';
-import {fetchItems} from '../actions/items';
-import {selectNewLisiting, selectSoldLisiting, selectCurrentLisiting, selectFilteredLisiting} from '../reducers';
+import {fetchItems, applyFilter, changeTab} from '../actions/items';
+import {selectNewLisiting, selectSoldLisiting, selectCurrentLisiting} from '../reducers';
+import {createSelector} from 'reselect'
 
 const Wrapper = styled.div`
     margin: 35px 0;
@@ -25,6 +26,7 @@ const SoldTabPane = styled(TabPane)`
         background-color: rgba(0,0,0,.4)
     }
 `;
+
 class ListingsWrapper extends Component {
     state = {
         activeTab: '1'
@@ -42,10 +44,12 @@ class ListingsWrapper extends Component {
                 activeTab: tab
             });
         }
+
+        this.props.changeTab(tab)
     };
 
     _onFilterSelected = (filters) => {
-        console.log("FILTER: ", filters);
+        this.props.applyFilter(filters)
     };
 
     render() {
@@ -119,14 +123,36 @@ const mapStateToProps = (state) => {
     const {items} = state;
     const isFetching = items.isFetching;
 
+    const selectItemFilters = (state) => state.items.filters;
+
+    const filteredCurrentListings = createSelector(selectCurrentLisiting, selectItemFilters, (itemList, filterList) => {
+        if (filterList.includes('all')) {
+            return itemList;
+        }
+        return itemList.filter(listing => filterList.includes(listing.type.toLowerCase().replace(/\s+/g, '')))
+    });
+
+    const filteredNewListings = createSelector(selectNewLisiting, selectItemFilters, (itemList, filterList) => {
+        if (filterList.includes('all')) {
+            return itemList;
+        }
+        return itemList.filter(listing => filterList.includes(listing.type.toLowerCase().replace(/\s+/g, '')))
+    });
+    const filteredSoldListings = createSelector(selectSoldLisiting, selectItemFilters, (itemList, filterList) => {
+        if (filterList.includes('all')) {
+            return itemList;
+        }
+        return itemList.filter(listing => filterList.includes(listing.type.toLowerCase().replace(/\s+/g, '')))
+    });
+
     return {
         isFetching,
-        list: selectCurrentLisiting(state),
-        newList: selectNewLisiting(state),
-        soldList: selectSoldLisiting(state),
+        list: filteredCurrentListings(state),
+        newList: filteredNewListings(state),
+        soldList: filteredSoldListings(state),
     };
 };
 
-const mapDispatchToProps = {fetchItems};
+const mapDispatchToProps = {fetchItems, applyFilter, changeTab};
 
 export default connect(mapStateToProps, mapDispatchToProps)(ListingsWrapper);
