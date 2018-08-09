@@ -92,8 +92,8 @@ const Listings = ({list}) => (
                 <TdWithPadding><Name>{item.type}</Name></TdWithPadding>
                 <TdWithPadding><Category>{item.category}</Category></TdWithPadding>
                 <TdWithPadding><Id>{item.id}</Id></TdWithPadding>
-                <TdWithPadding>{item.pbn ? 'al': item.pbn}</TdWithPadding>
-                <TdWithPadding>{item.interview ? ' ': <img src="/ico_seller_interview_02.png" width={20} alt="" style={{margin: '0 auto'}}/>}</TdWithPadding>
+                <TdWithPadding>{item.pbn !== null ? item.pbn : '\xa0'}</TdWithPadding>
+                <TdWithPadding>{item.interview ? '\xa0': <img src="/ico_seller_interview_02.png" width={20} alt="" style={{margin: '0 auto'}}/>}</TdWithPadding>
                 <TdWithPadding><Profit>{item.profit}</Profit></TdWithPadding>
                 <TdWithPadding><Price>{item.price}</Price></TdWithPadding>
             </Tr>

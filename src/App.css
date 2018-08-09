@@ -33,8 +33,6 @@ a:hover{
 .Navbar.navbar {
     background: #292929;
     color: #fff;
-    padding-top: 0;
-    padding-bottom: 0;
 }
 
 .Navbar .navbar-nav {
@@ -76,7 +74,31 @@ a:hover{
     border-bottom: 2px solid #F5A623;
 }
 
+.navbar-nav li:first-child .nav-link:hover{
+    background-color: transparent;
+    border-bottom-color: transparent;
+}
+@media (max-width: 767px) {
+
+    .Navbar.navbar,
+    .Navbar .navbar-nav{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .navbar-brand,
+    .nav-link{
+        padding-left: 1rem !important;
+    }
+    .navbar-toggler{
+        margin-right: 1rem;
+    }
+}
 @media (min-width: 768px) {
+
+    .Navbar.navbar{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
     .Navbar.navbar-expand-md .navbar-nav .nav-link {
         padding-right: 1rem;
         padding-left: 1rem;
@@ -90,6 +112,12 @@ a:hover{
     .Navbar .nav-item {
         display: flex;
         align-items: center;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav{
+        padding-right: 0 !important;
     }
 }
 

@@ -1,4 +1,4 @@
-import {APPLY_FILTER, CHANGE_TAB, ITEMS_REQUEST, ITEMS_SUCCESS, SEARCH_ITEM} from '../constants';
+import {APPLY_FILTER, CHANGE_TAB, ITEMS_REQUEST, ITEMS_SUCCESS} from '../constants';
 
 const auth = (state = { list:[], filters:['all'], activeTab: 1, searchQuery: '' }, action) => {
     switch (action.type) {
@@ -23,8 +23,6 @@ const auth = (state = { list:[], filters:['all'], activeTab: 1, searchQuery: '' 
                 activeTab: action.payload,
                 searchQuery: state.searchQuery,
             };
-        case SEARCH_ITEM:
-
         default:
             return state;
     }

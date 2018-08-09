@@ -15,17 +15,39 @@ const StatItem = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    
+     @media (max-width: 480px) {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        &:after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 80px;
+            height: 1px;
+            background-color: #fff;
+        }
+    }
 `;
 
 const StatValue = styled.p`
     color: #fff;
     font-size: 48px;
     margin-bottom: 15px;
+    
+    @media (max-width: 800px) {
+        font-size: 42px;
+        margin-bottom: 5px;
+    }
 `;
 
 const StatName = styled.p`
     color: #fff;
     font-size: 20px;
+    @media (max-width: 800px) {
+        font-size: 12px;
+    }
 `;
 
 const Stats = ({stats}) => (

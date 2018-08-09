@@ -17,10 +17,12 @@ const List = styled.ul`
         width: 100%;
         display: table;
         border-spacing: 10px;
-    border-collapse: separate;
-    
+        border-collapse: separate;
     }
     
+    &::-webkit-scrollbar { 
+        display: none; 
+    }
 `;
 
 const Item = styled.li`

@@ -14,17 +14,23 @@ const StyledTitle = styled.h3`
     margin-bottom: 30px;
 `;
 
+const HiddenImageOnSmall = styled.img`
+    @media (max-width: 800px) {
+        display: none !important;
+    }
+`;
+
 function SampleNextArrow(props) {
     const { className, onClick } = props;
     return (
-        <img src="/right.png" alt="Navigate forward" className={className} style={{width: 'auto'}} onClick={onClick}/>
+        <HiddenImageOnSmall src="/right.png" alt="Navigate forward" className={className} style={{width: 'auto'}} onClick={onClick}/>
     );
 }
 
 function SamplePrevArrow(props) {
     const { className, onClick } = props;
     return (
-        <img src="/left.png" alt="Navigate backwards" className={className} style={{width: 'auto'}} onClick={onClick}/>
+        <HiddenImageOnSmall src="/left.png" alt="Navigate backwards" className={className} style={{width: 'auto'}} onClick={onClick}/>
     );
 }
 

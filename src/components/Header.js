@@ -16,7 +16,7 @@ export default class Header extends Component {
 	render() {
 		return (
 			<Fragment>
-				<Navbar color="dark" dark expand="md" className="Navbar">
+				<Navbar color="dark" dark expand="lg" className="Navbar">
 					<Container>
 						<NavbarBrand href="/">
 							<img src="/crown.png" alt="Empire Flippers" />
@@ -26,19 +26,19 @@ export default class Header extends Component {
 						<Collapse isOpen={this.state.isOpen} navbar>
 							<Nav className="ml-auto" navbar>
 								<NavItem>
-									<NavLink href="/components/">888-658-8388</NavLink>
+									<NavLink href="/"><strong>888-658-8388</strong></NavLink>
 								</NavItem>
 								<NavItem>
-									<NavLink active href="/components/">Marketplace</NavLink>
+									<NavLink active href="/">Marketplace</NavLink>
 								</NavItem>
 								<NavItem>
-									<NavLink href="/components/">About us</NavLink>
+									<NavLink href="/">About us</NavLink>
 								</NavItem>
 								<NavItem>
-									<NavLink href="/components/">Blog</NavLink>
+									<NavLink href="/">Blog</NavLink>
 								</NavItem>
 								<NavItem>
-									<NavLink href="/components/">Podcast</NavLink>
+									<NavLink href="/">Podcast</NavLink>
 								</NavItem>
 								<NavItem>
 									<Button text={'Sell Your Site'} full={false} />

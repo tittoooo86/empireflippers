@@ -1,5 +1,5 @@
 import api from '../api/fakeApi';
-import {ITEMS_REQUEST, ITEMS_SUCCESS, APPLY_FILTER, CHANGE_TAB, SEARCH_ITEM} from '../constants';
+import {ITEMS_REQUEST, ITEMS_SUCCESS, APPLY_FILTER, CHANGE_TAB} from '../constants';
 
 function fethingItems() {
     return {
