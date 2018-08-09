@@ -142,5 +142,5 @@ I rebuilt the 'Marketplace' page using React, Redux, Styled Component and Bootst
 
 ## Quick Start
 1. Download or clone this repo using
-2. Run npm i && npm start
+2. Run ```npm i && npm start``` to see the app at http://localhost:3000.
 
