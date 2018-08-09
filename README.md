@@ -133,7 +133,14 @@ Right now the footer is a little crowded. What if we separate the navigation, th
 &nbsp;
 
 ![Updated Footer](http://drive.google.com/uc?export=view&id=1xDfmwzRI8Xn_fj-0HkethfcN07DQyVEF)
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+# The Code
+I rebuilt the 'Marketplace' page using React, Redux, Styled Component and Bootstrap. There is a room for improvement (e.g. the table layout on mobile devices or the filter function ) but I think it will gives you an idea what can i offer to you.
 
-
-
+## Quick Start
+1. Download or clone this repo using
+2. Run npm i && npm start
 

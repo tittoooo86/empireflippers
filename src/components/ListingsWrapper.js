@@ -10,7 +10,12 @@ import {fetchItems, applyFilter, changeTab} from '../actions/items';
 import {selectNewLisiting, selectSoldLisiting, selectCurrentLisiting} from '../reducers';
 
 const Wrapper = styled.div`
-    margin: 35px 0;
+    margin: 30px 0;
+    
+    @media (max-width: 768px) {
+        margin: 10px 0;
+    }
+    
 `;
 
 const SoldTabPane = styled(TabPane)`

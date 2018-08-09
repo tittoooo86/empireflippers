@@ -32,7 +32,7 @@ const Profit = styled.p`
 const Price = styled.p`
     color: #fff;
     background: #3c79cb;
-    line-height: 50px;
+    line-height: 30px;
     text-align: center;
     font-weight: 700;
     font-size: .75rem;
@@ -63,7 +63,7 @@ const ThWithPadding = styled(Th)`
     border-bottom: 1px solid #DDDDDD;
     color: #6D6D6D;
     
-     @media (min-width: 768px) {
+    @media (min-width: 768px) {
         padding: 20px 0;
     }
     
